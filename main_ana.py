@@ -6,5 +6,7 @@ populacao = 100
 chancedemutacao = 0.05
 geracao = 0 
 
-def genes(copia_gene):
+string = ''.join(random.choice(string.ascii_uppercase + ' ') for _ in range(len(frase)))
+
+while frase != string
     
