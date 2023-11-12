@@ -25,12 +25,13 @@ def score(frase):
 
 while melhor_pontuacao < 27:
     for i in range(100):
-        replica = frase_pai
+        replica = ''
         for letra in frase_pai:
             check_mutacao = mutacao()
             if check_mutacao <= 0.05:
-                replica = frase_pai.replace(letra, random.choice(string.ascii_uppercase))
-        check_pontuacao = score(replica)
+                replica += random.choice(string.ascii_uppercase)
+            else:
+                replica += letra
         if check_pontuacao == 27:
             break
         elif check_pontuacao > melhor_pontuacao:
