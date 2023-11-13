@@ -3,7 +3,8 @@ import random
 TARGET_PHRASE = "METHINKS IT IS LIKE A WEASEL"
 MUTATION_CHANCE = 0.05
 CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ "
-
+generation_count = 0
+phrase_rand = generate_phrase_rand()
 
 def generate_phrase_rand():
     phrase_rand = ''
@@ -38,8 +39,6 @@ def calculate_fitness(phrase):
     return score
 
 
-generation_count = 0
-phrase_rand = generate_phrase_rand()
 
 while phrase_rand != TARGET_PHRASE:
     best_phrase = ''
